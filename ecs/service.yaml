@@ -33,8 +33,7 @@ spec:
             name: develop-cluster
         subnetSelector:
           matchLabels:
-            - name: vpc-control-pc-private-us-west-1b
-            - name: vpc-control-pc-private-us-west-1c
+            name: vpc-control-pc-private-us-west-1b
     schedulingStrategy: REPLICA
     taskDefinitionRef:
       name: develop
