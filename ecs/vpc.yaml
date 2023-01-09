@@ -3,7 +3,7 @@ kind: VPC
 metadata:
   name: vpc-control-pc
   annotations: 
-    crossplane.io/external-name: vpc-control-pc
+    crossplane.io/external-name: vpc-0775fcc19ec3f0248
 spec:
   forProvider:
     region: us-east-1
