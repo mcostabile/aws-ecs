@@ -3,11 +3,11 @@ kind: SecurityGroup
 metadata:
   name: cluster-control-pc-node
   annotations:
-    crossplane.io/external-name: cluster-control-pc-node
+    crossplane.io/external-name: sg-001e48eb299a55221
 spec:
   forProvider:
     description: Security Group for wordpress
-    groupName: sg-001e48eb299a55221
+    groupName: cluster-control-pc-node
     region: us-west-1
   providerConfigRef:
     name: develop

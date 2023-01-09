@@ -20,9 +20,10 @@ apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
   name: vpc-control-pc-private-us-west-1b
+  annotations: 
+    crossplane.io/external-name: subnet-0dd49b2cc1af92861
 spec:
   forProvider:
-    cidrBlock: 10.210.3.0/24
     vpcIdRef:
       name: vpc-control-pc
     region: us-west-1
