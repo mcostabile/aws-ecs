@@ -9,7 +9,7 @@ spec:
   project: develop
   source:
     repoURL: https://github.com/mcostabile/aws-ecs.git
-    targetRevision: HEAD
+    targetRevision: develop
     path: ecs
   destination:
     server: https://kubernetes.default.svc
