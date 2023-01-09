@@ -5,6 +5,7 @@ metadata:
   annotations:
     crossplane.io/external-name: cluster-control-pc-node
 spec:
-  forProvider: {}
+  forProvider:
+    groupName: cluster-control-pc-node
   providerConfigRef:
     name: develop

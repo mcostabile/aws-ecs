@@ -20,7 +20,8 @@ kind: Subnet
 metadata:
   name: vpc-control-pc-private-us-west-1c
 spec:
-  forProvider: {}
+  forProvider: 
+    cidrBlock: 10.210.2.0/24
   providerConfigRef:
     name: develop
 
@@ -30,6 +31,7 @@ kind: Subnet
 metadata:
   name: vpc-control-pc-private-us-west-1b
 spec:
-  forProvider: {}
+  forProvider:
+    cidrBlock: 10.210.3.0/24
   providerConfigRef:
     name: develop
