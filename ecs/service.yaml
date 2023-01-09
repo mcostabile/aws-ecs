@@ -25,14 +25,6 @@ spec:
       containerPort: 8080
       targetGroupARNRef:
         name: test-targetgroup-with-ip-target
-    networkConfiguration:
-      awsvpcConfiguration:
-        assignPublicIP: DISABLED
-        securityGroupRefs:
-          - name: cluster-control-pc-node
-        subnetSelector:
-          matchLabels:
-            name: vpc-control-pc-private-us-west-1b
     schedulingStrategy: REPLICA
     taskDefinitionRef:
       name: develop
