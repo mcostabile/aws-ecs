@@ -13,3 +13,23 @@ spec:
     instanceTenancy: default
   providerConfigRef:
     name: develop
+
+---
+apiVersion: ec2.aws.crossplane.io/v1beta1
+kind: Subnet
+metadata:
+  name: vpc-control-pc-private-us-west-1c
+spec:
+  forProvider: {}
+  providerConfigRef:
+    name: develop
+
+---
+apiVersion: ec2.aws.crossplane.io/v1beta1
+kind: Subnet
+metadata:
+  name: vpc-control-pc-private-us-west-1b
+spec:
+  forProvider: {}
+  providerConfigRef:
+    name: develop

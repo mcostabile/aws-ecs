@@ -1,19 +1,8 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: SecurityGroup
 metadata:
-  name: cluster-control-pc-worker
+  name: cluster-control-pc-node
 spec:
-  forProvider:
-    description: Cluster communication with worker nodes
-    groupName: develop-cluster
-    ingress:
-      - fromPort: 80
-        ipProtocol: tcp
-        ipRanges:
-          - cidrIp: 10.210.0.0/16
-        toPort: 80
-    region: us-west-1
-    vpcIdRef:
-      name: vpc-control-pc
+  forProvider: {}
   providerConfigRef:
     name: develop
