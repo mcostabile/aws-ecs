@@ -10,7 +10,7 @@ spec:
       - fromPort: 80
         ipProtocol: tcp
         ipRanges:
-          - cidrIp: 10.210.0.0/24
+          - cidrIp: 0.0.0.0/0
         toPort: 80
     region: us-west-1
     vpcIdRef:
