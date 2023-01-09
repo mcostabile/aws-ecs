@@ -30,7 +30,7 @@ spec:
         assignPublicIP: DISABLED
         securityGroupSelector:
           matchLabels:
-            - name: cluster-control-pc-node
+            name: cluster-control-pc-node
         subnetRefs:
           - name: vpc-control-pc-private-us-west-1b
           - name: vpc-control-pc-private-us-west-1c
