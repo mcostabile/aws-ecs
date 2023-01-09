@@ -3,12 +3,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: production
+  name: develop
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: Production project
+  description: develop project
   sourceRepos:
   - '*'
   destinations:
