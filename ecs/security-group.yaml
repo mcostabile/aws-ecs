@@ -6,6 +6,7 @@ metadata:
     crossplane.io/external-name: cluster-control-pc-node
 spec:
   forProvider:
+    description: Security Group for wordpress
     groupName: cluster-control-pc-node
   providerConfigRef:
     name: develop
