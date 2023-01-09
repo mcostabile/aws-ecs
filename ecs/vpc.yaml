@@ -24,8 +24,9 @@ metadata:
     crossplane.io/external-name: subnet-0dd49b2cc1af92861
 spec:
   forProvider:
+    region: us-west-1
+    cidrBlock: 10.210.4.0/24
     vpcIdRef:
       name: vpc-control-pc
-    region: us-west-1
   providerConfigRef:
     name: develop
