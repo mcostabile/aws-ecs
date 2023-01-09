@@ -3,16 +3,16 @@
 apiVersion: ecs.aws.crossplane.io/v1alpha1
 kind: Cluster
 metadata:
-  name: example
+  name: develop
 spec:
   forProvider:
-    clusterName: example-cluster
+    clusterName: develop-cluster
     region: us-west-1
     capacityProviders:
     - FARGATE
     - FARGATE_SPOT
     tags:
     - key: Type
-      value: example
+      value: develop
   providerConfigRef:
-    name: example
+    name: develop

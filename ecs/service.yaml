@@ -3,12 +3,12 @@
 apiVersion: ecs.aws.crossplane.io/v1alpha1
 kind: Service
 metadata:
-  name: example
+  name: develop
 spec:
   forProvider:
     region: us-west-1
     clusterRef:
-      name: example
+      name: develop
     deploymentConfiguration:
       deploymentCircuitBreaker:
         enable: false
@@ -27,6 +27,6 @@ spec:
         name: test-targetgroup-with-ip-target
     schedulingStrategy: REPLICA
     taskDefinitionRef:
-      name: example
+      name: develop
   providerConfigRef:
-    name: example
+    name: develop

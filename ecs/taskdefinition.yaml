@@ -3,10 +3,10 @@
 apiVersion: ecs.aws.crossplane.io/v1alpha1
 kind: TaskDefinition
 metadata:
-  name: example
+  name: develop
 spec:
   forProvider:
-    family: example-taskdefinition
+    family: develop-taskdefinition
     region: us-west-1
     containerDefinitions:
     - cpu: 0
@@ -23,17 +23,17 @@ spec:
     - FARGATE
     tags:
     - key: Type
-      value: example
+      value: develop
   providerConfigRef:
-    name: example
+    name: develop
 ---
 apiVersion: ecs.aws.crossplane.io/v1alpha1
 kind: TaskDefinition
 metadata:
-  name: example-with-volume
+  name: develop-with-volume
 spec:
   forProvider:
-    family: example-taskdefinition-with-volume
+    family: develop-taskdefinition-with-volume
     region: us-east-1
     containerDefinitions:
     - cpu: 0
@@ -53,17 +53,17 @@ spec:
     - FARGATE
     tags:
     - key: Type
-      value: example
+      value: develop
     volumes:
     - name: wordpress
       efsVolumeConfiguration:
         authorizationConfig:
           iam: DISABLED
           accessPointIDRef:
-            name: example
+            name: develop
         fileSystemIDRef:
-          name: example
+          name: develop
         rootDirectory: "/"
         transitEncryption: ENABLED
   providerConfigRef:
-    name: example
+    name: develop
