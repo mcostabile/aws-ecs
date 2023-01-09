@@ -8,5 +8,6 @@ spec:
   forProvider:
     description: Security Group for wordpress
     groupName: cluster-control-pc-node
+    region: us-west-1
   providerConfigRef:
     name: develop

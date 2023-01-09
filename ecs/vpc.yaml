@@ -15,17 +15,7 @@ spec:
     name: develop
 
 ---
-apiVersion: ec2.aws.crossplane.io/v1beta1
-kind: Subnet
-metadata:
-  name: vpc-control-pc-private-us-west-1c
-spec:
-  forProvider: 
-    cidrBlock: 10.210.2.0/24
-  providerConfigRef:
-    name: develop
 
----
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
@@ -33,5 +23,7 @@ metadata:
 spec:
   forProvider:
     cidrBlock: 10.210.3.0/24
+    vpcIdRef:
+      name: vpc-control-pc
   providerConfigRef:
     name: develop
