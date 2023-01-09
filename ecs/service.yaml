@@ -28,6 +28,8 @@ spec:
     networkConfiguration:
       awsvpcConfiguration:
         assignPublicIP: DISABLED
+        securityGroupRefs:
+          - name: cluster-control-pc-worker
         subnetRefs:
           - name: vpc-control-pc-private-us-west-1b
           - name: vpc-control-pc-private-us-west-1c
