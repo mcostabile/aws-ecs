@@ -34,7 +34,7 @@ metadata:
 spec:
   forProvider:
     family: develop-taskdefinition-with-volume
-    region: us-east-1
+    region: us-west-1
     containerDefinitions:
     - cpu: 0
       portMappings:

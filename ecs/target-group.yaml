@@ -7,7 +7,7 @@ spec:
     name: test-targetgroup-with-ip-target
     port: 80
     protocol: HTTP
-    region: us-east-1
+    region: us-west-1
     targetType: ip
     vpcIdRef:
       name: vpc-control-pc
