@@ -1,0 +1,15 @@
+apiVersion: ec2.aws.crossplane.io/v1beta1
+kind: VPC
+metadata:
+  name: vpc-control-pc
+  annotations: 
+    crossplane.io/external-name: vpc-control-pc
+spec:
+  forProvider:
+    region: us-east-1
+    cidrBlock: 10.210.0.0/16
+    enableDnsSupport: true
+    enableDnsHostNames: true
+    instanceTenancy: default
+  providerConfigRef:
+    name: develop
