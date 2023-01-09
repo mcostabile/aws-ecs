@@ -25,5 +25,6 @@ spec:
     cidrBlock: 10.210.3.0/24
     vpcIdRef:
       name: vpc-control-pc
+    region: us-west-1
   providerConfigRef:
     name: develop

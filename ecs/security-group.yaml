@@ -7,7 +7,7 @@ metadata:
 spec:
   forProvider:
     description: Security Group for wordpress
-    groupName: cluster-control-pc-node
+    groupName: sg-001e48eb299a55221
     region: us-west-1
   providerConfigRef:
     name: develop
