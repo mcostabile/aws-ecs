@@ -2,6 +2,8 @@ apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: SecurityGroup
 metadata:
   name: cluster-control-pc-node
+  annotations:
+    crossplane.io/external-name: cluster-control-pc-node
 spec:
   forProvider: {}
   providerConfigRef:
