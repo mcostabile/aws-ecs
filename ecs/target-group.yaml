@@ -13,3 +13,21 @@ spec:
       name: develop-vpc
   providerConfigRef:
     name: develop
+
+---
+
+apiVersion: elbv2.aws.crossplane.io/v1alpha1
+kind: LoadBalancer
+metadata:
+  name: develop-elb
+spec:
+  forProvider:
+    loadBalancerType: application
+    name: develop-elb
+    region: us-west-1
+    securityGroupRefs:
+      - name: develop-sg
+    subnetRefs:
+      - name: develop-us-west-1b
+  providerConfigRef:
+    name: develop
