@@ -30,9 +30,8 @@ spec:
         assignPublicIP: DISABLED
         securityGroupRefs:
           - name: develop-sg
-        subnetSelector:
-          matchLabels:
-            name: develop-us-west-1b
+        subnetRefs:
+          - name: develop-us-west-1b
     schedulingStrategy: REPLICA
     taskDefinitionRef:
       name: develop
