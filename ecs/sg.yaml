@@ -1,7 +1,7 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: SecurityGroup
 metadata:
-  name: develop
+  name: develop-sg
 spec:
   forProvider:
     description: Cluster communication with worker nodes
@@ -10,10 +10,10 @@ spec:
       - fromPort: 80
         ipProtocol: tcp
         ipRanges:
-          - cidrIp: 0.0.0.0/0
+          - cidrIp: 10.210.0.0/8
         toPort: 80
     region: us-west-1
     vpcIdRef:
-      name: vpc-control-pc
+      name: develop-vpc
   providerConfigRef:
     name: develop

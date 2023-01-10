@@ -9,8 +9,7 @@ spec:
     protocol: HTTP
     region: us-west-1
     targetType: ip
-    vpcID: vpc-0775fcc19ec3f0248
     vpcIdRef:
-      name: vpc-control-pc
+      name: develop-vpc
   providerConfigRef:
     name: develop

@@ -1,16 +1,31 @@
+# apiVersion: ec2.aws.crossplane.io/v1beta1
+# kind: VPC
+# metadata:
+#   name: vpc-control-cp
+#   annotations: 
+#     crossplane.io/external-name: vpc-0775fcc19ec3f0248
+# spec:
+#   forProvider:
+#     region: us-west-1
+#     cidrBlock: 10.210.0.0/16
+#     enableDnsSupport: true
+#     enableDnsHostNames: true
+#     instanceTenancy: default
+#   providerConfigRef:
+#     name: develop
+---
+
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: VPC
 metadata:
-  name: vpc-control-pc
-  annotations: 
-    crossplane.io/external-name: vpc-0775fcc19ec3f0248
+  name: develop-vpc
 spec:
   forProvider:
-    region: us-west-1
     cidrBlock: 10.210.0.0/16
-    enableDnsSupport: true
     enableDnsHostNames: true
+    enableDnsSupport: true
     instanceTenancy: default
+    region: us-west-1
   providerConfigRef:
     name: develop
 
@@ -19,14 +34,14 @@ spec:
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
-  name: vpc-control-pc-private-us-west-1b
-  annotations: 
-    crossplane.io/external-name: subnet-0dd49b2cc1af92861
+  name: develop-us-west-1b
 spec:
   forProvider:
+    availabilityZone: us-west-1b
+    cidrBlock: 10.210.1.0/24
+    mapPublicIPOnLaunch: true
     region: us-west-1
-    cidrBlock: 10.210.4.0/24
     vpcIdRef:
-      name: vpc-control-pc
+      name: develop-vpc
   providerConfigRef:
     name: develop

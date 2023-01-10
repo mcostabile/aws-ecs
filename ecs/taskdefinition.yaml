@@ -26,6 +26,7 @@ spec:
       value: develop
   providerConfigRef:
     name: develop
+    
 ---
 apiVersion: ecs.aws.crossplane.io/v1alpha1
 kind: TaskDefinition
