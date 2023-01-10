@@ -45,3 +45,20 @@ spec:
       name: develop-vpc
   providerConfigRef:
     name: develop
+
+---
+
+apiVersion: ec2.aws.crossplane.io/v1beta1
+kind: Subnet
+metadata:
+  name: develop-us-west-1c
+spec:
+  forProvider:
+    availabilityZone: us-west-1c
+    cidrBlock: 10.210.1.0/24
+    mapPublicIPOnLaunch: true
+    region: us-west-1
+    vpcIdRef:
+      name: develop-vpc
+  providerConfigRef:
+    name: develop

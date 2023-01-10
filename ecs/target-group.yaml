@@ -29,5 +29,6 @@ spec:
       - name: develop-sg
     subnetRefs:
       - name: develop-us-west-1b
+      - name: develop-us-west-1c
   providerConfigRef:
     name: develop

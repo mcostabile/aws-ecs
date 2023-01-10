@@ -32,6 +32,7 @@ spec:
           - name: develop-sg
         subnetRefs:
           - name: develop-us-west-1b
+          - name: develop-us-west-1c
     schedulingStrategy: REPLICA
     taskDefinitionRef:
       name: develop
